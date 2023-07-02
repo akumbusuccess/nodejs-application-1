@@ -7,7 +7,7 @@ echo 'The following "npm" command runs your Node.js application'
 echo 'Trail to fix node app upload issue'
 set -x
 # npm start & # for it to run in the background
-npm start &
+npm start 
 # node app.js &
 # npm install pm2 -g
 # pm2 start app.js
