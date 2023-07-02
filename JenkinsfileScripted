@@ -4,7 +4,7 @@ node
   stage("CheckOutCodeGit")
   {
    sh "echo 'cloning the latest application version' "
-   git branch: 'feature', credentialsId: 'gitHubCredentials', url: 'https://github.com/olorunfemi007/nodejs-application.git'}
+   git credentialsId: '1e33a549-25a6-4149-aefb-8846762d3566', url: 'https://github.com/olorunfemi007/nodejs-application.git'}
  
  stage("Build")
  {
