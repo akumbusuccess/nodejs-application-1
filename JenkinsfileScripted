@@ -23,8 +23,8 @@ node
     stage('UploadintoNexus') {
        nodejs(nodeJSInstallationName: 'nodejs20.3.1') {
           sh 'chmod u+x ./nexus.sh'
-          sh './nexus.sh'
-          sh 'npm publish'
+          sh './scripts/runApp.sh'
+        //   sh 'npm publish'
       }
       
           }	
