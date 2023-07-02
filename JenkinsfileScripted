@@ -22,9 +22,8 @@ node
 		
     stage('UploadintoNexus') {
        nodejs(nodeJSInstallationName: 'nodejs20.3.1') {
-          sh 'sudo yum install expect -y'
-          sh 'chmod u+x ./scripts/runTests.sh'
-          sh './scripts/runTests.sh'
+          sh 'chmod u+x ./scripts/stopApp.sh'
+          sh './scripts/stopApp.sh'
           sh 'npm publish'
       }
       
