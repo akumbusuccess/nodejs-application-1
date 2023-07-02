@@ -1,9 +1,17 @@
-#!/bin/bash
+registry_url="http://52.207.254.164:8081/repository/fintech-app-release/"
 
+# Provide your Nexus registry username and password
+username=admin
+password=admin123
 
-# Set your npm username and password
-NPM_USERNAME="admin"
-NPM_PASSWORD="admin123"
-
-# Run the npm login command with provided credentials
-echo -e "${NPM_USERNAME}\n${NPM_PASSWORD}\n\n" | npm login --registry=http://52.207.254.164:8081/repository/fintech-app-release/
+# Run npm login command using expect
+expect <<EOF
+spawn npm login --registry="$registry_url"
+expect "Username: "
+send "$username\r"
+expect "Password: "
+send "$password\r"
+expect "Email: (this IS public) "
+send "\r"
+expect eof
+EOF
