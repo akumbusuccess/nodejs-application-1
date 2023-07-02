@@ -1,4 +1,3 @@
-#!/usr/bin/expect -f
 
 
 echo 'The following "npm" command runs your Node.js application'
