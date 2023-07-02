@@ -20,12 +20,12 @@ node
       
         } 
 		
-    stage('UploadintoNexus') {
-       nodejs(nodeJSInstallationName: 'nodejs20.3.1') {
-          sh 'npm publish'
-      }
+    // stage('UploadintoNexus') {
+    //    nodejs(nodeJSInstallationName: 'nodejs20.3.1') {
+    //       sh 'npm publish'
+    //   }
       
-          }	
+    //       }	
  
  stage('RunNodeJsApp')
  {
