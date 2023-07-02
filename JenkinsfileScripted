@@ -8,20 +8,20 @@ node
  
  stage("Build")
  {
- nodejs(nodeJSInstallationName: 'nodejs1.6.0') {
+ nodejs(nodeJSInstallationName: 'nodejs20.3.1') {
         sh 'npm install'
     }
  }  
  
   stage('ExecuteSonarQubeReport') {
-     nodejs(nodeJSInstallationName: 'nodejs1.6.0') {
+     nodejs(nodeJSInstallationName: 'nodejs20.3.1') {
         sh 'npm run sonar'
     }
       
         } 
 		
     stage('UploadintoNexus') {
-       nodejs(nodeJSInstallationName: 'nodejs1.6.0') {
+       nodejs(nodeJSInstallationName: 'nodejs20.3.1') {
           sh 'npm publish'
       }
       
@@ -30,7 +30,7 @@ node
  stage('RunNodeJsApp')
  {
  //sh "./scripts/run.sh"
- nodejs(nodeJSInstallationName: 'nodejs1.6.0') {
+ nodejs(nodeJSInstallationName: 'nodejs20.3.1') {
         sh 'npm start &'
     }
 }    
