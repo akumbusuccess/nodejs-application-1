@@ -5,7 +5,7 @@
 echo 'The following "npm" command runs your Node.js application'
 
 set -x
-npm start  # for it to run in the background
+forever start app.js # for it to run in the background
 sleep 1
 echo $! > .pidfile  # echo $! will show the scripts running in the background
 set +x
