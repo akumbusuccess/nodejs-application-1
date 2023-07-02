@@ -11,7 +11,7 @@ expect "Username: "
 send "$username\r"
 expect "Password: "
 send "$password\r"
-expect "Email: (this IS public) "
-send "\r"
 expect eof
 EOF
+
+sleep 2
