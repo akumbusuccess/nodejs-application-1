@@ -31,7 +31,7 @@ node
  {
  //sh "./scripts/run.sh"
  nodejs(nodeJSInstallationName: 'nodejs20.3.1') {
-    sh 'sudo chmod u+x ./scripts/runApp.sh'
+    // sh 'sudo chmod u+x ./scripts/runApp.sh'
     sh './scripts/runApp.sh'
         // sh 'npm start &'
     }
