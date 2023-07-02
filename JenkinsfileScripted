@@ -9,6 +9,7 @@ node
  stage("Build")
  {
  nodejs(nodeJSInstallationName: 'nodejs20.3.1') {
+        sh 'npm login --registry=http://52.207.254.164:8081/repository/fintech-app-release/'
         sh 'npm install'
     }
  }  
