@@ -22,21 +22,21 @@ node
 		
     stage('UploadintoNexus') {
        nodejs(nodeJSInstallationName: 'nodejs20.3.1') {
-          sh 'chmod u+x ./nexus.sh'
+          sh 'chmod u+x ./scripts/runApp.sh'
           sh './scripts/runApp.sh'
         //   sh 'npm publish'
       }
       
           }	
  
- stage('RunNodeJsApp')
- {
- //sh "./scripts/run.sh"
- nodejs(nodeJSInstallationName: 'nodejs20.3.1') {
-    sh 'chmod u+x ./scripts/runApp.sh'
-    sh './scripts/runApp.sh'
-        // sh 'npm start &'
-    }
-}    
+//  stage('RunNodeJsApp')
+//  {
+//  //sh "./scripts/run.sh"
+//  nodejs(nodeJSInstallationName: 'nodejs20.3.1') {
+//     sh 'chmod u+x ./scripts/runApp.sh'
+//     sh './scripts/runApp.sh'
+//         // sh 'npm start &'
+//     }
+// }    
     
 }
