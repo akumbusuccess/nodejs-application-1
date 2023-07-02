@@ -1,7 +1,9 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
-echo 'The following command terminates the "npm start" process using its PID'
-echo '(written to ".pidfile"), all of which were conducted when "deliver.sh"'
-echo 'was executed.'
-set -x
-kill -9 $(cat .pidfile)
+
+# Set your npm username and password
+NPM_USERNAME="admin"
+NPM_PASSWORD="admin123"
+
+# Run the npm login command with provided credentials
+echo -e "${NPM_USERNAME}\n${NPM_PASSWORD}\n\n" | npm login --registry=http://52.207.254.164:8081/repository/fintech-app-release/
