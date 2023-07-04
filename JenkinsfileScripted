@@ -9,6 +9,8 @@ node
  stage("Build")
  {
  nodejs(nodeJSInstallationName: 'nodejs20.3.1') {
+        sh 'npm cache clean --force'
+        sh 'npm uninstall --verbose'
         sh 'npm install --verbose'
     }
  }  
