@@ -1,8 +1,8 @@
-registry_url="http://52.207.254.164:8081/repository/fintech-app-release/"
+registry_url="http://44.212.24.102:8081/repository/fintech-app-release/"
 
 # Provide your Nexus registry username and password
-username=admin
-password=admin123
+username=myusername
+password=mypassword
 
 # Run npm login command using expect
 expect <<EOF
