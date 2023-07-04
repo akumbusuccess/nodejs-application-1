@@ -1,3 +1,5 @@
+sh 'npm config set registry http://44.212.24.102:8081/repository/fintech-app-release/'
+
 registry_url="http://44.212.24.102:8081/repository/fintech-app-release/"
 
 # Provide your Nexus registry username and password
@@ -14,4 +16,5 @@ send "$password\r"
 expect eof
 EOF
 
+sh 'npm config set registry http://registry.npmjs.org/'
 sleep 2
