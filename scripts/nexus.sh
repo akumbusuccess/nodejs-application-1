@@ -16,5 +16,7 @@ send "$password\r"
 expect eof
 EOF
 
-sh 'npm config set registry http://registry.npmjs.org/'
+sleep 2
+
+npm config set registry http://registry.npmjs.org/
 sleep 2
