@@ -1,4 +1,5 @@
-npm config set registry http://44.212.24.102:8081/repository/fintech-app-release/
+npm config list
+# npm config set registry http://44.212.24.102:8081/repository/fintech-app-release/
 
 registry_url="http://44.212.24.102:8081/repository/fintech-app-release/"
 
