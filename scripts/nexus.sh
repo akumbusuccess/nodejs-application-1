@@ -1,4 +1,4 @@
-npm config set registry http://44.212.24.102:8081/repository/fintech-app-release/
+# npm config set registry http://44.212.24.102:8081/repository/fintech-app-release/
 
 registry_url="http://44.212.24.102:8081/repository/fintech-app-release/"
 
@@ -16,7 +16,5 @@ send "$password\r"
 expect eof
 EOF
 
-sleep 2
-
-npm config set registry http://registry.npmjs.org/
+# npm config set registry http://registry.npmjs.org/
 sleep 2
