@@ -9,7 +9,8 @@ node
  stage("Build")
  {
  nodejs(nodeJSInstallationName: 'nodejs20.3.1') {
-        sh 'npm cache clean --force'
+        // sh 'npm cache clean --force'
+        npm config set registry http://registry.npmjs.org/
         sh 'npm install --verbose'
     }
  }  
